@@ -1,35 +1,35 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Menu } from "lucide-react"
-import { useState } from "react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById("contact-support")
+    const contactSection = document.getElementById("contact-support");
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" })
+      contactSection.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <header className="govt-header sticky top-0 z-50 tricolor-border">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0096FF]">
-            <span className="text-lg font-bold text-white">L</span>
-          </div>
           <div>
-            <h1 className="text-lg font-bold text-gray-800">LandResolve</h1>
+            <h1 className="text-lg font-bold text-gray-800">BHOOMI ARCHIVER</h1>
             <p className="text-xs text-gray-500">Property Resolution Portal</p>
           </div>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="/" className="text-sm font-medium text-gray-800 hover:text-saffron transition-colors">
+          <Link
+            href="/"
+            className="text-sm font-medium text-gray-800 hover:text-saffron transition-colors"
+          >
             Home
           </Link>
           <button
@@ -43,7 +43,12 @@ export default function Header() {
           </Button>
         </nav>
 
-        <Button variant="outline" size="icon" className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <Button
+          variant="outline"
+          size="icon"
+          className="md:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
           <Menu className="h-5 w-5" />
         </Button>
       </div>
@@ -61,19 +66,22 @@ export default function Header() {
             </Link>
             <button
               onClick={() => {
-                scrollToContact()
-                setMobileMenuOpen(false)
+                scrollToContact();
+                setMobileMenuOpen(false);
               }}
               className="text-sm font-medium text-gray-800 hover:text-saffron transition-colors py-2 text-left"
             >
               Contact
             </button>
-            <Button size="sm" className="bg-green hover:bg-green-dark text-white w-full mt-2">
+            <Button
+              size="sm"
+              className="bg-green hover:bg-green-dark text-white w-full mt-2"
+            >
               Login
             </Button>
           </nav>
         </div>
       )}
     </header>
-  )
+  );
 }

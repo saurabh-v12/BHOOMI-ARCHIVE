@@ -1,42 +1,36 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { ArrowRight, FileText, Shield } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { ArrowRight, FileText, Shield } from "lucide-react";
 
 export default function Hero() {
   const scrollToSearch = () => {
-    const searchSection = document.getElementById("search-section")
+    const searchSection = document.getElementById("search-section");
     if (searchSection) {
-      searchSection.scrollIntoView({ behavior: "smooth" })
+      searchSection.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2">
-            <div className="inline-flex items-center rounded-full bg-saffron bg-opacity-10 px-3 py-1 text-xs font-medium text-saffron mb-6">
-              <Shield className="mr-1.5 h-3.5 w-3.5" />
-              Official Property Resolution Service
-            </div>
-
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Resolve Land Disputes <span className="text-saffron">Efficiently</span>
+              BHOOMI ARCHIVER
             </h1>
 
             <p className="text-gray-600 mb-8 max-w-xl">
-              Streamlined process to find, verify, and resolve land ownership disputes through our official portal with
-              modern technology and transparent procedures.
+              Seamlessly access and unify property data across platforms.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-green hover:bg-green-dark text-white" onClick={scrollToSearch}>
-                Start Dispute Resolution
+              <Button
+                className="bg-green hover:bg-green-dark text-white"
+                onClick={scrollToSearch}
+              >
+                Get's Started
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button variant="outline" className="border-saffron text-saffron hover:bg-saffron hover:bg-opacity-10">
-                Learn More
               </Button>
             </div>
           </div>
@@ -47,7 +41,9 @@ export default function Hero() {
                 <div className="p-4">
                   <div className="flex items-center mb-4">
                     <FileText className="h-5 w-5 text-saffron mr-2" />
-                    <h3 className="font-semibold text-gray-800">Land Records Visualization</h3>
+                    <h3 className="font-semibold text-gray-800">
+                      Land Records Visualization
+                    </h3>
                   </div>
                   <div className="aspect-video bg-gray-100 rounded-md mb-4 overflow-hidden">
                     <img
@@ -64,7 +60,9 @@ export default function Hero() {
                         <FileText className="h-3.5 w-3.5 mr-1" />
                         Land Record #21453
                       </div>
-                      <div className="text-xs font-medium text-saffron">View Details</div>
+                      <div className="text-xs font-medium text-saffron">
+                        View Details
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -74,7 +72,9 @@ export default function Hero() {
                 <div className="text-center">
                   <div className="text-xs text-gray-500 mb-1">Verification</div>
                   <div className="text-2xl font-bold text-green">100%</div>
-                  <div className="text-xs text-green font-medium">Completed</div>
+                  <div className="text-xs text-green font-medium">
+                    Completed
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function StatCard({ value, label }: { value: string; label: string }) {
@@ -98,5 +98,5 @@ function StatCard({ value, label }: { value: string; label: string }) {
       <div className="text-2xl md:text-3xl font-bold text-saffron">{value}</div>
       <div className="text-sm text-gray-600">{label}</div>
     </div>
-  )
+  );
 }

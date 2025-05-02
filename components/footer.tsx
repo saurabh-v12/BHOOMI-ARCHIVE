@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import type React from "react"
-import Link from "next/link"
+import type React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -14,13 +14,16 @@ export default function Footer() {
                 <span className="text-lg font-bold text-white">L</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold">LandResolve</h3>
-                <p className="text-xs text-gray-400">Property Resolution Portal</p>
+                <h3 className="text-lg font-bold">BHOOMI ARCHIVER</h3>
+                <p className="text-xs text-gray-400">
+                  Property Resolution Portal
+                </p>
               </div>
             </div>
             <p className="text-gray-400 mb-4">
-              Official portal for land dispute resolution, record verification, and property ownership management with
-              modern technology and transparent procedures.
+              Official portal for land dispute resolution, record verification,
+              and property ownership management with modern technology and
+              transparent procedures.
             </p>
             <div className="flex space-x-4">
               <SocialIcon>
@@ -173,7 +176,9 @@ export default function Footer() {
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
-                <span className="text-gray-400">support@landresolve.gov.in</span>
+                <span className="text-gray-400">
+                  support@landresolve.gov.in
+                </span>
               </li>
             </ul>
           </div>
@@ -181,7 +186,8 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Land Dispute Resolution Portal. All rights reserved.
+            © {new Date().getFullYear()} Land Dispute Resolution Portal. All
+            rights reserved.
           </p>
           <div className="flex items-center text-xs text-gray-400">
             <Link href="#" className="hover:text-white mr-4">
@@ -194,7 +200,7 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
 function SocialIcon({ children }: { children: React.ReactNode }) {
@@ -205,15 +211,24 @@ function SocialIcon({ children }: { children: React.ReactNode }) {
     >
       {children}
     </a>
-  )
+  );
 }
 
-function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
   return (
     <li>
-      <Link href={href} className="text-gray-400 hover:text-white transition-colors">
+      <Link
+        href={href}
+        className="text-gray-400 hover:text-white transition-colors"
+      >
         {children}
       </Link>
     </li>
-  )
+  );
 }
